@@ -10,16 +10,8 @@ main = print answer
 
 -- | The upper bound set in the question.
 maxValue = 1000
+valueList = [1..(maxValue - 1)]
 
--- | Returns the multiples of some list.
-multiples multiple = [x | x <- [1..(maxValue - 1)], x `mod` multiple == 0]
+isMultiple x multiple = x `mod` multiple == 0
 
-multiplesOfThree = multiples 3
-multiplesOfFive = multiples 5
-
-answer = sum
-    (
-        multiplesOfThree
-        ++
-        [x | x <- multiplesOfFive, not (x `elem` multiplesOfThree)]
-    )
+answer = sum [x | x <- valueList, x `isMultiple` 3 || x `isMultiple` 5]
