@@ -1,0 +1,9 @@
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    sha: 2dda8367897e80bb27d0c52bcbc8759f8119dfe3
+    hooks:
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+-   repo: https://github.com/pre-commit/pre-commit
+    sha: f537b778085201e8e4028de16abed439832a2830
+    hooks:
+    -   id: validate_config
