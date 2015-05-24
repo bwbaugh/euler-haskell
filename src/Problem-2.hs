@@ -13,15 +13,20 @@ main :: IO ()
 main = print answer
 
 -- | The upper bound set in the question.
+upperbound :: Integer
 upperbound = 4000000
 
+answer :: Integer
 answer = sum (takeWhile (<= upperbound) evenFibonacci)
 
+evenFibonacci :: [Integer]
 evenFibonacci = [x | x <- fibonacciSequence, even x]
 
+fibonacciSequence :: [Integer]
 fibonacciSequence = [fibonacci x | x <- [1..]]
 
 -- The seed numbers are to satisfy the definition in the question.
+fibonacci :: Integer -> Integer
 fibonacci 1 = 1
 fibonacci 2 = 2
 fibonacci n = fibonacci (n - 1) + fibonacci (n - 2)
