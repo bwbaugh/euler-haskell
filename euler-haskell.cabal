@@ -7,7 +7,7 @@ name:                euler-haskell
 -- PVP summary:      +-+------- breaking API changes
 --                   | | +----- non-breaking API additions
 --                   | | | +--- code changes with no API change
-version:             0.1.0
+version:             0.2.0
 
 -- A short (one-line) description of the package.
 synopsis:            Learning the Haskell language by solving Project Euler problems.
@@ -56,4 +56,9 @@ executable problem-1
   
   -- Base language which the package is written in.
   default-language:    Haskell2010
-  
+
+executable problem-2
+  main-is: Problem-2.hs
+  hs-source-dirs: src
+  build-depends: base >=4.8 && <4.9
+  default-language:    Haskell2010
