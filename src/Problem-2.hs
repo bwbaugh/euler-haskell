@@ -17,10 +17,7 @@ upperbound :: Integer
 upperbound = 4000000
 
 answer :: Integer
-answer = sum (takeWhile (<= upperbound) evenFibonacci)
-
-evenFibonacci :: [Integer]
-evenFibonacci = [x | x <- fibonacciSequence, even x]
+answer = sum (filter even (takeWhile (<= upperbound) fibonacciSequence))
 
 fibonacciSequence :: [Integer]
 fibonacciSequence = [fibonacci x | x <- [1..]]
